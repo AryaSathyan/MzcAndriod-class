@@ -1,5 +1,6 @@
 package com.example.administrator.mzcapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 EditText ed1,ed2;
-    Button bu;
+    Button bu,r;
     String getuname,getpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ EditText ed1,ed2;
         ed1=(EditText)findViewById(R.id.user);
         ed2=(EditText)findViewById(R.id.pass);
         bu=(Button)findViewById(R.id.login);
+        r=(Button)findViewById(R.id.regi);
 
         bu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,13 @@ EditText ed1,ed2;
                 Toast.makeText(getApplicationContext(),getpassword,Toast.LENGTH_SHORT).show();
 
                 //Toast.makeText(getApplicationContext(),"HELLO",Toast.LENGTH_LONG).show();
+            }
+        });
+        r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),Registeractiviy.class);
+                startActivity(i);
             }
         });
 
