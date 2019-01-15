@@ -84,4 +84,6 @@
         android:layout_height="wrap_content"
         android:text="Already registered"
         android:id="@+id/alr"/>
+
+
 </LinearLayout>

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 EditText ed1,ed2;
-    Button bu,r;
+    Button bu,r,n;
     String getuname,getpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ EditText ed1,ed2;
         ed2=(EditText)findViewById(R.id.pass);
         bu=(Button)findViewById(R.id.login);
         r=(Button)findViewById(R.id.regi);
-
+        n=(Button)findViewById(R.id.next);
         bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +39,14 @@ EditText ed1,ed2;
                 startActivity(i);
             }
         });
+        n.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),Calculator.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 }
